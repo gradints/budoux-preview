@@ -73,8 +73,10 @@
 
 <template>
   <div class="flex-1 flex justify-center h-full">
-    <div class="text-white bg-gray-800" id="preview" v-html="html" style="width: 400px"></div>
-    <div ref="resizer" class="cursor-ew-resize w-6 z-10 -mx-3"></div>
+    <div class="text-white bg-gray-800 break-keep break-words py-4 px-2" id="preview" v-html="html" style="width: 400px"></div>
+    <div ref="resizer" class="cursor-ew-resize w-4 p-1 z-10 -mx-1 bg-gray-800 hover:bg-gray-700 flex items-center justify-center">
+      <svg class="fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M32 32c-8.8 0-16 7.2-16 16l0 416c0 8.8 7.2 16 16 16s16-7.2 16-16L48 48c0-8.8-7.2-16-16-16zm128 0c-8.8 0-16 7.2-16 16l0 416c0 8.8 7.2 16 16 16s16-7.2 16-16l0-416c0-8.8-7.2-16-16-16z"/></svg>
+    </div>
   </div>
 </template>
 

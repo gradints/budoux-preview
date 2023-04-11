@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "budoux": "^0.5.0",
     "vue": "^3.2.41"
   },
   "devDependencies": {
