@@ -1,4 +1,3 @@
-<!-- eslint-disable vue/no-v-html -->
 <script setup lang="ts">
   // https://htmldom.dev/create-resizable-split-views/
   import { onBeforeUnmount, onMounted, ref } from 'vue'
@@ -81,6 +80,7 @@
   }, 100)
 </script>
 
+<!-- eslint-disable vue/no-v-html -->
 <template>
   <div class="flex-1 flex flex-col">
     <div class="text-center text-white py-2">
