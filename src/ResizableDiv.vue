@@ -7,8 +7,8 @@
   }>()
 
   // Query the element
-  let resizer: HTMLElement|null
-  let previewDiv: HTMLElement|null
+  let resizer: HTMLElement | null
+  let previewDiv: HTMLElement | null
 
   // The current position of mouse
   let x = 0
@@ -55,7 +55,6 @@
     previewDiv?.style.removeProperty('user-select')
     previewDiv?.style.removeProperty('pointer-events')
 
-
     // Remove the handlers of `mousemove` and `mouseup`
     document.removeEventListener('mousemove', mouseMoveHandler)
     document.removeEventListener('mouseup', mouseUpHandler)
@@ -82,19 +81,24 @@
 
 <!-- eslint-disable vue/no-v-html -->
 <template>
-  <div class="flex-1 flex flex-col">
-    <div class="text-center text-white py-2">
+  <div class="flex flex-1 flex-col">
+    <div class="py-2 text-center text-white">
       Width:
       <span class="text-blue-500">{{ width }}px</span>
     </div>
-    <div class="flex justify-center flex-1">
+    <div class="flex flex-1 justify-center">
       <div
         id="preview"
-        class="text-white bg-gray-800 break-keep break-words py-4 px-2"
+        class="break-words break-keep bg-gray-800 px-2 py-4 text-white"
         style="width: 400px"
         v-html="html"></div>
-      <div id="resizer" class="cursor-ew-resize w-4 p-1 z-10 -mx-1 bg-gray-800 hover:bg-gray-700 flex items-center justify-center">
-        <svg class="fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M32 32c-8.8 0-16 7.2-16 16l0 416c0 8.8 7.2 16 16 16s16-7.2 16-16L48 48c0-8.8-7.2-16-16-16zm128 0c-8.8 0-16 7.2-16 16l0 416c0 8.8 7.2 16 16 16s16-7.2 16-16l0-416c0-8.8-7.2-16-16-16z" /></svg>
+      <div
+        id="resizer"
+        class="z-10 w-4 flex cursor-ew-resize items-center justify-center bg-gray-800 p-1 -mx-1 hover:bg-gray-700">
+        <svg
+          class="fill-white"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 192 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M32 32c-8.8 0-16 7.2-16 16l0 416c0 8.8 7.2 16 16 16s16-7.2 16-16L48 48c0-8.8-7.2-16-16-16zm128 0c-8.8 0-16 7.2-16 16l0 416c0 8.8 7.2 16 16 16s16-7.2 16-16l0-416c0-8.8-7.2-16-16-16z" /></svg>
       </div>
     </div>
   </div>

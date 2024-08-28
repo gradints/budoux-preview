@@ -1,8 +1,9 @@
 {
   "recommendations": [
     "Vue.volar",
-    "antfu.unocss",
     "dbaeumer.vscode-eslint",
-    "cpylua.language-postcss"
+    "antfu.unocss",
+    "cpylua.language-postcss",
+    "ronilaukkarinen.vscode-stylefmt",
   ]
 }

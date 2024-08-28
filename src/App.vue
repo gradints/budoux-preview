@@ -12,30 +12,30 @@
 </script>
 
 <template>
-  <div class="flex h-screen min-h-800px py-8">
-    <div class="px-8 w-480px flex flex-col">
+  <div class="h-screen min-h-800px flex py-8">
+    <div class="w-480px flex flex-col px-8">
       <div class="mb-4">
         <div class="py-2 text-blue-500">
           Insert Japanese Text Here
         </div>
         <textarea
           v-model="text"
-          class="rounded-lg px-4 pt-2 pb-4 w-full bg-gray-700 text-white focus:outline-none"
+          class="w-full rounded-lg bg-gray-700 px-4 pb-4 pt-2 text-white focus:outline-none"
           placeholder="Input japanese text here"
           rows="12"></textarea>
       </div>
-      <div class="flex-1 flex flex-col">
+      <div class="flex flex-1 flex-col">
         <div class="py-2 text-blue-500">
           Output
         </div>
         <textarea
           :value="htmlOutput"
           readonly
-          class="bg-gray-800 text-white flex-1 p-4 rounded-lg focus:outline-none"
+          class="flex-1 rounded-lg bg-gray-800 p-4 text-white focus:outline-none"
           placeholder="Input japanese text here"></textarea>
       </div>
     </div>
-    <resizable-div :html="html" />
+    <resizable-div :html="html"></resizable-div>
   </div>
 </template>
 
